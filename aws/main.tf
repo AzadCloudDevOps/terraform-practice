@@ -13,9 +13,9 @@ region = "us-east-1"
 }
 
 locals {
-	instances = {"Devendra":"ami-0b0dcb5067f052a63","Braj":"ami-08c40ec9ead489470","Abrar":"ami-08c40ec9ead489470","Nimo":"ami-0b0dcb5067f052a63"}
+        instances = {"Dev":"ami-0b0dcb5067f052a63","Raj":"ami-09a41e26df464c548","Abdul":"ami-0574da719dca65348","Nitin":"ami-08e637cea2f053dfa"}    
 }
-
+                                                                                                                                                         
 resource "aws_instance" "aws_ec2_test" {
         for_each = local.instances
         ami = each.value
@@ -24,4 +24,3 @@ resource "aws_instance" "aws_ec2_test" {
      Name = each.key
   }
 }
-
